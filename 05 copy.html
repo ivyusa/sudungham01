@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ngôi sao</title>
+
+</head>
+<body>
+<script>
+    let ngoisao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
+    let chomsao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+        let i;
+        let ngoisao1=[];
+        for (i = 0; i < ngoisao.length; i++) {
+            let text = ngoisao[i].toLowerCase();
+            ngoisao1.push(text);
+        }
+        function checkstar(star) {
+            let example = star.toLowerCase();
+            let index = ngoisao1.indexOf(example);
+            if (index === -1){
+                document.write("Không có");
+            }else {
+                document.write(chomsao[index]);
+            }
+        }
+    let searchStar= prompt("nhap ten sao ")  ;
+    checkstar(searchStar);
+</script>
+</body>
+</html>
